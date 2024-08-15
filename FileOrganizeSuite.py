@@ -263,11 +263,9 @@ def upgrade_script():
         with open(sys.argv[0], 'wb') as file:
             file.write(updated_script)
 
-        print("Update complete. Restarting the script...")
-        # Provide feedback to the user
-        print("The script has been successfully updated. Restarting now...")
-
+        print("Download complete.")
         # Restart the script
+        input("Press Enter to Intall...")
         subprocess.call([sys.executable] + sys.argv)
         sys.exit()
 
