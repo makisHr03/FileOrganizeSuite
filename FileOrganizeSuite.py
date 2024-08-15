@@ -128,6 +128,7 @@ def select_file_types():
         print("4. Audio")
         print("5. Custom select extensions")
         print("6. Select all types of files")
+        print("----------------------------")
         print("7. Upgrade script")
         print("8. Exit")
 
