@@ -263,6 +263,9 @@ def upgrade_script():
             file.write(updated_script)
 
         print("Update complete. Restarting the script...")
+        # Provide feedback to the user
+        print("The script has been successfully updated. Restarting now...")
+
         # Restart the script
         subprocess.call([sys.executable] + sys.argv)
         sys.exit()
@@ -270,6 +273,7 @@ def upgrade_script():
     except Exception as e:
         log_message("ERROR", f"Failed to upgrade script: {e}")
         print("Failed to upgrade script. Please check the log for details.")
+
 
 def main():
     global destination_dir, duplicates_detected  # Declare global variables
