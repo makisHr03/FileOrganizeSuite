@@ -10,7 +10,7 @@ log_full = []
 log_error = []
 duplicate_files = []
 duplicates_detected = False
-script_url = "https://raw.githubusercontent.com/makisHr03/FileOrganizeSuite/main/FileOrganizeSuite.py"
+script_url = "https://raw.githubusercontent.com/makisHr03/FileOrganizeSuite/main/FileOrganizeSuite/src/FileOrganizeSuite.py"
 
 def show_logo():
     print("""
@@ -22,7 +22,7 @@ def show_logo():
 //|_|   |_|_|\___|\___/|_|  \__, |\__,_|_| |_|_/___\___|____/ \__,_|_|\__\___|//
 //                          |___/                                             //
 ////////////////////////////////////////////////////////////////////////////////
-                                                                         v1.1.0
+                                                                         v1.1.5
     """)
 
 def clear_screen():
