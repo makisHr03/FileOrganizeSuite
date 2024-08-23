@@ -5,7 +5,7 @@ net session >nul 2>&1
 if %errorlevel% neq 0 (
     :: Inform the user that the script is not running with admin privileges
     echo The script is not running with administrator privileges!
-    set /p "choice=Do you want to run this script with administrative privileges to uninstall AppSync? (y/n): "
+    set /p "choice=Do you want to run this script with administrative privileges to manage FileOrganizeSuite? (y/n): "
     goto admin_access
 
 
@@ -52,6 +52,7 @@ goto options
 :: Define variables
 SET "mypath=%~dp0"
 set "runner_path=%mypath%src\Runner.bat"
+set "upgarder_path=%mypath%src\Upgrader.py"
 set "icon_file_path=%mypath%src\icon.ico"
 set "python_file_path=%mypath%src\FileOrganizeSuite.py"
 set "destination_path=C:\Program Files (x86)\FileOrganizeSuite"
@@ -60,10 +61,6 @@ set "shortcut_path=C:\ProgramData\Microsoft\Windows\Start Menu\Programs\FileOrga
 set "target_path_sortcut=C:\Program Files (x86)\FileOrganizeSuite\Runner.bat"
 set "shortcut_name=FileOrganizeSuite"
 set "icon_path=C:\Program Files (x86)\FileOrganizeSuite\icon.ico"
-
-
-
-
 
 :: Create destination directory if it does not exist
 if not exist "%destination_path%" (
@@ -81,6 +78,14 @@ if errorlevel 1 (
 )
 
 copy "%runner_path%" "%destination_path%"
+if errorlevel 1 (
+    echo Error_2
+    echo Oops! Something went wrong. Please help us improve by reporting this issue on GitHub: https://github.com/makisHr03/FileOrganizeSuite/issues
+    pause
+    exit /b
+)
+
+copy "%upgarder_path%" "%destination_path%"
 if errorlevel 1 (
     echo Error_2
     echo Oops! Something went wrong. Please help us improve by reporting this issue on GitHub: https://github.com/makisHr03/FileOrganizeSuite/issues
@@ -116,7 +121,6 @@ if not exist "%shortcut_path%" (
 cls
 echo Program has been installed successfully.
 pause
-goto options
 exit /b
 
 :uninstall
@@ -150,7 +154,6 @@ if errorlevel 1 (
 cls
 echo Program has been uninstalled successfully.
 pause
-goto options
 exit /b
 
 
