@@ -1,4 +1,6 @@
 # FileOrganizeSuite
+![Untitled-1](https://github.com/user-attachments/assets/9501d8aa-8a7f-4945-a44c-a9a3c7025f2b)
+
 
 ## Description
 FileOrganizeSuite is a Python-based tool designed to help you organize files into categorized folders based on their extensions. It supports various file types, handles duplicates, logs activities, and includes batch files for installation and uninstallation on Windows.
