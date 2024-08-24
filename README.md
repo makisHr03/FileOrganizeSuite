@@ -12,11 +12,12 @@ FileOrganizeSuite is a Python-based tool designed to help you organize files int
 - **Logging**: Comprehensive logs for information and errors.
 - **Automatic Upgrades**: Option to upgrade the script from a remote URL.
 - **Batch Files**: Simplified installation and uninstallation on Windows.
+  
    ![image](https://github.com/user-attachments/assets/542040cc-bf94-4680-9530-ad42ac7286e2)
 
 
 ## Requirements
-- **Python 3.x**: Ensure Python is installed on your system.
+- **Python 3.x**: Ensure Python is installed on your system. (You can install it using the install `Python_installer.bat`)
 - **Python Packages**: `tqdm` for progress bars. (You can install it inside the program)
 
 ## Installation and Running
@@ -42,4 +43,4 @@ FileOrganizeSuite is a Python-based tool designed to help you organize files int
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/your-username/FileOrganizeSuite.git
-   cd FileOrganizeSuite
+   cd FileOrganizeSuite\src
