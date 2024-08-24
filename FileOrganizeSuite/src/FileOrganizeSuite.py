@@ -2,9 +2,9 @@ import os
 import shutil
 import subprocess
 import sys
-from tqdm import tqdm
 import ctypes
-import time
+from tqdm import tqdm
+
 
 # Global variables
 log_full = []
@@ -22,7 +22,7 @@ def show_logo():
 //|_|   |_|_|\___|\___/|_|  \__, |\__,_|_| |_|_/___\___|____/ \__,_|_|\__\___|//
 //                          |___/                                             //
 ////////////////////////////////////////////////////////////////////////////////
-                                                                         v1.2.1
+                                                                         v1.2.0
     """)
 
 def clear_screen():
@@ -146,7 +146,7 @@ def select_file_types():
             if choice == 5:
                 selected_exts = []
                 for cat, exts in file_types.items():
-                    print(f"\nSelect {cat} extensions (e.g., jpg,png):")
+                    print(f"\nSelect {cat} extensions (e.g., jpg, png):")
                     print(f"Available: {', '.join(exts)}")
                     user_exts = input("Enter your choices: ").strip().split(",")
                     selected_exts.extend([f".{ext.strip()}" for ext in user_exts if f".{ext.strip()}" in exts])
