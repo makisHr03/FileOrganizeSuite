@@ -42,5 +42,5 @@ FileOrganizeSuite is a Python-based tool designed to help you organize files int
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/FileOrganizeSuite.git
+   git clone https://github.com/makisHr03/FileOrganizeSuite.git
    cd FileOrganizeSuite\src
