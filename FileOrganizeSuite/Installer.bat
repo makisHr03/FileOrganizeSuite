@@ -26,7 +26,6 @@ goto options
         pause
         exit /b
     )
-)
 
 :options
 :: Display menu options
